@@ -6,27 +6,25 @@ const userImagePaths = [
     // 여러 사용자의 이미지 경로를 추가합니다.
 ];
 
-
-// 스타 잔액 업데이트
-const starBalanceElement = document.getElementById("star_balance");
-starBalanceElement.textContent = current; // current 값을 star_balance에 복사
-
-// 스타 기부 수 초기화
-const starDonationElement = document.getElementById("starDonation");
-let starDonation = 0; // 사용자가 기부한 스타 수, 초기값은 0으로 설정
-
+// keywordList 요소 가져오기
 const keywordList = document.getElementById("keywordList");
 
-
-// 입력된 키워드 가져오기
-const keywordInput = document.getElementById("keyword");
-const keyword = keywordInput.value;
+// keywordForm 요소 가져오기
+const keywordForm = document.getElementById("keywordForm");
 
 // 입력 필드 초기화
-keywordInput.value = "";
+const keywordInput = document.getElementById("keyword");
+
+// 키워드 입력 폼 제출 이벤트 처리
+keywordForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // 폼 제출 기본 동작 방지
+
+    // 입력된 키워드 가져오기
+    const keyword = keywordInput.value;
+
+
 
 // 현재 키워드 목록 가져오기
-const keywordList = document.getElementById("keywordList");
 const keywords = keywordList.querySelectorAll("li");
 
 // 목록에 추가된 키워드가 4개 미만인 경우에만 추가
@@ -49,8 +47,3 @@ if (keywords.length < 4) {
 
     keywordList.appendChild(listItem);
 }
-
-// 스타 기부 수 업데이트
-starDonation += 1; // 키워드가 추가될 때마다 1씩 증가 (예시로 1을 증가시킴)
-starDonationElement.textContent = `총 ${starDonation} 스타 기부 달성`;
-});
