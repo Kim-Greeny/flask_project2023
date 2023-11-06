@@ -76,96 +76,65 @@
           text-align: center;
           padding: 20px;
         }
-
-        .outerbox {
-            margin:5%;
-            width: 35%;
-            height: 370px;
-            background-color: white;
+        .column{
+          display:flex;
+          flex-direction:column;
         }
-
-        .innerbox {
-            width:30%;
-            height: 270px;
-            background-color: gray;
-            position:relative;left:7.6%;bottom:390px;
+        .row{
+          display:flex;
+          flex-direction:row;
         }
-
-        .bottomleft {
-            position: relative;
-            top:300px;
-            left:8%;
-            font-size: 9px;
+        .outerbox{
+          background-color:#dfdfdf;
+          width:40%;height:380px;
+          border: solid white;
+          border-width: 20px 20px 80px 20px ;
+          font-size:28px;
         }
-        .bottomleft2{
-          position:relative;
-          top:250;
-          left:5%;
+        .bottom{
+          position:relative;top:385px;
         }
-
-        .current {
-            background: white;
-            border-radius: 50% / 50%;
-            text-align: center;
+        .circle{
+          width:180px;height:70px;
+          border-radius:50%/50%;
+          background-color:white;
+          text-align:center;
+          line-height:3.5;
+          font-size:22;
         }
-
-        .size1 {
-            width: 20%;
-            height: 60px;
-            font-size: 20px;
-        }
-
-        .size2 {
-            width: 35%;
-            height: 60px;
-        }
-
         .plusoutline {
-            display:flex;
-            width: 25%;
-            height: 270px;
-            background-color: #f512cc;
+          width: 180px;
+          height: 270px;
+          background-color: #f512cc;
+          border-radius:10%/10%;
         }
 
         .minusoutline {
-          display:flex;
-            width: 25%;
-            height: 270px;
-            background-color: gray;
+          width: 180px;
+          height: 270px;
+          background-color: gray;
+          border-radius:10%/10%;
         }
-
-        .change {
-            width: 20%;
-            height: 20px;
-            background-color: white;
-            border: 1px solid black;
-            border-radius: 20%/20%;
-            font-size: 9px;
-            text-align: center;
+        .bottomleft{
+          position:relative;top:250;left:10;
         }
         .size{
-            width:20%;height:17px;
-            font-size:10px;
-            text-align:left;
+          width:30%;height:45;
+          font-size:25;
+          border-radius:10%/10%;
         }
         .inputsize {
-            width: 51%;
-            height: 17px;
-            font-size: 7px;
+          width: 370;
+          height: 40px;
+          font-size: 25px;
         }
-
-        .finish {
-            background-color: pink;
-            border: 1px solid black;
-            border-radius: 20%/20%;
-        }
-        .column{
-          display: flex;
-          flex-direction: column;
-        }
-        .row{
-          display: flex;
-          flex-direction: row;
+        .finish{
+          background-color: #ff0997;
+          border: 1px solid black;
+          border-radius: 10%/10%;
+          width:100;height:60;
+          font-size:30;
+          color:white;
         }
     </style>
 </head>
@@ -193,45 +162,52 @@
   </nav>
 
     <div class="container">
-      
-            <h1 style="margin:5%;position:relative;left:1%;top:35">경매종료
-            <span style="color:FF26D8;font-size:30pt;">D-day</span></h1>
-            <div class="outerbox">
-                <div class="bottomleft"><h1>Item name: <br>빈티지 텔레비전</div>
+      <br><br><br><br><br> 
+      <div class="column">
+        <h1 style="position:relative;left:3%">경매종료 <span style="font-size:60px;color:#fe1b9e">D-DAY</h1>
+      <div class="row">
+        <div class="outerbox"style="position:relative;left:2%">
+          <div class="bottom">Item name:<br>빈티지 텔레비전</div>
+        </div>
+        
+        <div class="column">
+          <br><br><br><br><br><br>
+          <div class="circle"style="position:relative;left:10%;">현재입찰금액</div>
+          <div class="circle"style="position:relative;left:45%;bottom:35px;width:210;text-align:right">원</div>
+        
+
+          <div class="row">
+            <div class="plusoutline"style="position:relative;left:10%">
+              <div class="bottomleft">add</div>
             </div>
 
-            <div class="column">
-            <div class="row">
-              <div class="innerbox"></div>
-              <div class="current size2" style="position:relative;left:30%;bottom:290;"></div>
-              <div class="current size1" style="position:relative;right:20%;bottom:315"><br>현재입찰금액</div>
+            <div class="minusoutline"style="position:relative;left:13%;">
+              <div class="bottomleft">minus</div>
             </div>
-
-            <div class="row">
-              <div class="plusoutline"style="position:relative;left:43%;bottom:480">
-                <div class="bottomleft2">add</div>
-              </div>
-
-              <div class="minusoutline"style="position:relative;left:44%;bottom:480">
-                <div class="bottomleft2">minus</div>
-              </div>
-            </div>
-
-            <input class="size";type='button' onclick='count("plus500")' value='+500' style=/>
-            <input class="size";type='button' onclick='count("plus1000")'value='+1000'style=/>
-            <input class="size";type='button' onclick='count("plus5000")'value='+5000'style=/>
-            <input class="size"; type='button' onclick='count("minus500")'value='-500'style=/>
-            <input class="size";type='button' onclick='count("minus1000")'value='-1000'style=/>
-            <input class="size";type='button' onclick='count("minus5000")'value='-5000'style=/>
-            <div id='result' style="position:">0</div>
-            </div>
-
-            <form method="get" action="">
-                <input class="inputsize" type="number" name="number" placeholder="입찰금액을 직접 입력하세요">
-                <input class="finish" type="submit" value="Finish">
-            </form>
           </div>
+
+          <input class="size";type='button' onclick='count("plus500")' value='+500' style="position:relative;left:74;bottom:230">
+          <input class="size";type='button' onclick='count("plus1000")'value='+1000'style="position:relative;left:74;bottom:200">
+          <input class="size";type='button' onclick='count("plus5000")'value='+5000'style="position:relative;left:74;bottom:170">
+          <input class="size";type='button' onclick='count("minus500")'value='-500'style="position:relative;left:264;bottom:366">
+          <input class="size";type='button' onclick='count("minus1000")'value='-1000'style="position:relative;left:264;bottom:336">
+          <input class="size";type='button' onclick='count("minus5000")'value='-5000'style="position:relative;left:264;bottom:306">
+          <div id='result' style="position:relative;left:227;bottom:630;font-size:40px">0</div>
+
+          <form method="get" action="">
+                <input class="inputsize" style="position:relative;bottom:300;left:40" type="number" name="number" placeholder="입찰금액을 직접 입력하세요">
+                <input class="finish" type="submit" value="Finish" style="position:relative;bottom:280;left:310;">
+          </form>
+
+        </div>
+
+        </div>
+
     </div>
+    </div>
+
+
+
     <div class="footer">
       <div>
         <div class="footer-content">
