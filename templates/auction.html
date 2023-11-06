@@ -86,6 +86,7 @@
           flex-direction:row;
         }
         .outerbox{
+          display:flex;
           background-color:#dfdfdf;
           width:40%;height:380px;
           border: solid white;
@@ -96,14 +97,15 @@
           position:relative;top:385px;
         }
         .circle{
+          display:flex;
           width:180px;height:70px;
           border-radius:50%/50%;
           background-color:white;
           text-align:center;
-          line-height:3.5;
           font-size:22;
         }
         .plusoutline {
+          display:flex;
           width: 180px;
           height: 270px;
           background-color: #f512cc;
@@ -111,6 +113,7 @@
         }
 
         .minusoutline {
+          display:flex;
           width: 180px;
           height: 270px;
           background-color: gray;
@@ -120,16 +123,19 @@
           position:relative;top:250;left:10;
         }
         .size{
+          display:flex;
           width:15%;height:50;
           font-size:25;
           border-radius:10%/10%;
         }
         .inputsize {
+          display:flex;
           width: 370;
           height: 40px;
           font-size: 25px;
         }
         .finish{
+          display:flex;
           background-color: #ff0997;
           border: 1px solid black;
           border-radius: 10%/10%;
@@ -171,8 +177,8 @@
         </div>
         
           <br><br><br><br><br><br>
-          <div class="circle"style="position:relative;left:50%;bottom:400;">현재입찰금액</div>
-          <div class="circle"style="position:relative;left:70%;bottom:450px;width:210;text-align:right">원</div>
+          <div class="circle"style="position:relative;left:50%;bottom:400;"><pre>  현재입찰금액</pre></div>
+          <div class="circle"style="position:relative;left:70%;bottom:450px;width:210;text-align:right"></div>
         
 
     
@@ -190,7 +196,7 @@
           <input class="size";type='button' onclick='count("minus500")'value='-500'style="position:relative;left:250;bottom:900">
           <input class="size";type='button' onclick='count("minus1000")'value='-1000'style="position:relative;left:125;bottom:830">
           <input class="size";type='button' onclick='count("minus5000")'value='-5000'style="position:relative;left:;bottom:760">
-          <div id='result' style="position:relative;left:610;bottom:1095;font-size:40px">0</div>
+          <div id='result' style="position:relative;left:80%;bottom:1345;font-size:40px">0</div>
 
           <form method="get" action="">
                 <input class="inputsize" style="position:relative;bottom:760;left:400" type="number" name="number" placeholder="입찰금액을 직접 입력하세요">
