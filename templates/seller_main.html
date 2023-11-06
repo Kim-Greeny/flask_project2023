@@ -61,7 +61,6 @@
           margin: 20px auto;
           background-color: white;
           border: 1px solid #ccc;
-          padding: 20px;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -70,12 +69,13 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-around;
+            background-image: url('profile_background.png');
+            background-size: cover;
         }
 
         .profile-image {
             width: 150px;
             height: 150px;
-            border-radius: 50%;
             object-fit: cover;
             margin-bottom: 10px;
         }
@@ -94,26 +94,35 @@
         }
 
         .follow-button, .home-button, .review-button {
-            background-color: #3897f0;
-            color: white;
+            background-color: white;
+            color: black;
             padding: 8px 16px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             margin-right: 10px;
+            border-style: ridge;
+            font-family: "Irish Grover";
+        }
+
+        .content_container{
+          background-color: #F44D99;
         }
 
         .review {
               display: flex;
               flex-wrap: wrap;
               justify-content: space-between;
-              margin-top: 20px;
+              padding: 20px;
           }
 
           .review-item {
               width: calc(33.3333% - 10px);
               margin-bottom: 10px;
               overflow: hidden;
+              border-style: ridge;
+              border-color: white;
+              border-radius: 8px;
           }
 
           .review-item img {
@@ -199,13 +208,13 @@
   <div class="profile-container">
     <div class="image-container">
       <br><br>
-        <img class="profile-image" src="profile-picture.jpg" alt="Profile Picture">
+        <img class="profile-image" src="profile_img.png" alt="Profile Picture">
     </div>
 
     <div class="info-container">
       <div class="profile-info">
           <br><br><br>
-          <h1>Username</h1><br>
+          <div class="name"><h1>Username</h1><br></div>
           <p>판매수: 100 | 기부 누적 스타: 1000 | 팔로워: 100</p>
       </div>
       <br>
@@ -216,24 +225,27 @@
       </div>
   </div>
 </div>
-    <br><br><br><hr />
-    <div><h3>Review</h3></div>
+    <div class="content_container">
+    <img src="divide_line.png">
+    <br><br>
+    <div class="review_name"><img src="reviewtag.png"></div>
     <div class="review">
       <!-- Review Item 1 -->
-      <div class="review-item" onclick="openModal('image1.jpg', 'Review Image 1')">
-           <img src="image1.jpg" alt="Review Image 1">
+      <div class="review-item" onclick="openModal('item_img.png', 'Review Image 1')">
+           <img src="item_img.png" alt="Review Image 1">
        </div>
 
        <!-- Review Item 2 -->
-       <div class="review-item" onclick="openModal('image2.jpg', 'Review Image 2')">
-           <img src="image2.jpg" alt="Review Image 2">
+       <div class="review-item" onclick="openModal('item_img.png', 'Review Image 2')">
+           <img src="item_img.png" alt="Review Image 2">
        </div>
 
        <!-- Review Item 3 -->
-       <div class="review-item" onclick="openModal('image3.jpg', 'Review Image 3')">
-           <img src="image3.jpg" alt="Review Image 3">
+       <div class="review-item" onclick="openModal('item_img.png', 'Review Image 3')">
+           <img src="item_img.png" alt="Review Image 3">
        </div>
     </div>
+</div>
 </div>
 
     <div class="footer">
