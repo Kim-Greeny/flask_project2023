@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/takePage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.google.com/specimen/Inknut+Antiqua" rel="stylesheet" />
+   
+   
+    <link
+      href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Source+Serif+4:opsz@8..60&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+
+  @font-face {
+    font-family: 'Orbit-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+      .image-container {
+        position: relative; 
+  display: inline-block; 
+  }
+
+  .centered-text {
+    
+    position: absolute; 
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  color: black;
+  font-size: 50px; 
+  font-weight: bold; 
+  font-family: 'Orbit-Regular';
+  }
+
+      .container{
+        display: flex;
+       align-items: center;
+       background-color: #FFFFFF;
+          
+      
+      }
+      .item_info_container {
+        display: flex; 
+        justify-content:center; 
+      
+      }
+      .item_input_container{
+             
+        flex-direction: row;
+        margin-left:3%;
+
+      }
+      .item{
+       display:flex;
+       margin-top:3%;
+      }
+
+
+      .input{
+        width:700px;
+        height:80px;
+        border:3px solid #000000;
+        border-radius: 20px;
+      }
+
+      input::placeholder {
+        
+        font-size: 30px;
+        color: #888; 
+           
+      }
+  .input_introducion{
+
+    height: 300px;
+  width: 1000px;
+  border-radius: 20px;
+  font-size: 30px; 
+  padding: 10px; 
+  text-align: left;
+  resize: none; 
+  line-height: normal;
+  overflow: auto; 
+  }
+
+  
+    
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center;
+
+    font-size:40px;
+   
+    height: 80px;
+    width: 200px;
+    
+    padding: 10px 20px;
+    margin: 5px;
+    
+    
+    font-family: Orbit-Regular;
+    border-radius:20px ;
+    border:3px solid #000000;
+  }
+
+  
+  input[type="radio"]:checked + label {
+   
+    border-radius:20px ;
+    border:3px solid #000000;
+    background-color: #ffbce7;
+  }
+.finish_button{
+  margin-top: 50px;
+  margin-left: 40%;
+  width: 300px;
+  height:150px;
+  background-color:#F44D99;
+  border-radius: 20px;
+  font-size: 80px;
+  color: #FFFFFF;
+  font-family:Inknut Antiqua;
+}
+
+     
+      
+    </style>
+    
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div style="display: flex; flex-direction: row; align-items: center">
+          <a href="" class="title">Giboo & Take</a>
+          <ul class="navbar_menu">
+            <li>Giboo</li>
+            <li>Take</li>
+            <li>Charge</li>
+          </ul>
+        </div>
+        <div class="login">
+          <div>login</div>
+          <div>|</div>
+          <div>sign up</div>
+          <img
+            src="../static/icons/profile_img.png"
+            alt="profile"
+            style="width: 50px"
+          />
+        </div>
+      </nav>
+  <!---->
+  <div class="container">
+   <div>
+      <img src="../image_product_register/Wave.png" alt="WAVE"/>
+      <img src="../image_product_register/스크린샷 2023-10-14 오전 12.27 2.png" alt="LINE"/>
+
+      <div class="image-container">
+        <img src="../image_product_register/product_register_tag.png" alt="TAG"/>
+        <div class="centered-text">상품등록</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--product_regidter main funtion_상품 등록화면-->
+
+<div class="item_info_container">
+<div>
+  <img src="../image_product_register/item_box_register.png"  alt="ITEM_BOX"/>
+  <div class="item">
+  <img src="../image_product_register/mini_itemphoto.png" alt="ITEM_INFO_TAG"/>
+  <img src="../image_product_register/mini_itemphoto.png" alt="ITEM_INFO_TAG"/>
+<script>
+  
+</script>
+</div>
+<div class="item">
+  <img src="../image_product_register/mini_itemphoto.png" alt="ITEM_INFO_TAG"/>
+  <img src="../image_product_register/mini_itemphoto.png" alt="ITEM_INFO_TAG"/>
+</div>
+</div>
+
+
+<div class="item_input_container">
+  <!--상품명-->
+  <div class="item">
+    <div class="image-container">
+      <img src="../image_product_register/item_info_tag.png" alt="ITEM_INFO_TAG"/>
+      <div class="centered-text" style="font-size:40px">상품명</div>
+    </div>
+  
+  </div>
+  <div class="item">
+  <input type="text" class="input" id="item_name" name="item_name" placeholder="   상품 이름을 입력하세요."  />
+  </div>
+   <!--상품가격-->
+  <div class="item">
+    <div class="image-container">
+      <img src="../image_product_register/item_info_tag.png" alt="ITEM_INFO_TAG"/>
+      <div class="centered-text" style="font-size:40px">상품가격</div>
+    </div>
+  </div>
+  <div class="item">
+  <input type="number" class="input" id="item_price" name="item_price" placeholder="   가격을 입력하세요." />
+  </div>
+   <!--거래방식-->
+  <div class="item">
+    <div class="image-container">
+      <img src="../image_product_register/item_info_tag.png" alt="ITEM_INFO_TAG"/>
+      <div class="centered-text" style="font-size:40px">거래방식</div>
+    </div>
+    </div>
+  <div class="item">
+
+    <input type="radio" id="delivery" name="trade" value="direct" />
+    <label for="delivery">택배</label>
+    <input type="radio" id="direct" name="trade" value="delivery" />
+    <label for="direct">직거래</label>
+  </div>
+  <!--상품 상태--> 
+  <div class="item">
+    <div class="image-container">
+      <img src="../image_product_register/item_info_tag.png" alt="ITEM_INFO_TAG"/>
+      <div class="centered-text" style="font-size:40px">상품 상태</div>
+    </div>
+  </div>
+  <div class="item">
+  <input type="radio" id="super" name="condition" value="direct" />
+    <label for="super">최상</label>
+    <input type="radio" id="good" name="condition" value="delivery" />
+    <label for="good">상</label>
+    <input type="radio" id="soso" name="condition" value="direct" />
+    <label for="soso">중</label>
+    <input type="radio" id="bad" name="condition" value="delivery" />
+    <label for="bad">하</label>
+  </div>
+ 
+  <!--상세설명-->
+  <div class="item">
+    <div class="image-container">
+      <img src="../image_product_register/item_info_tag.png" alt="ITEM_INFO_TAG"/>
+      <div class="centered-text" style="font-size:40px">상세설명</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <textarea type="text" class="input_introducion" id="item_name" name="item_name" 
+    placeholder="상품 상태: ex. 기스가 약간 있어요,사용감 전혀 없어요."></textarea>
+    </div>
+
+  <!--경매기간-->  
+  <div class="item">
+    <div class="image-container">
+      <img src="../image_product_register/item_info_tag.png" alt="ITEM_INFO_TAG"/>
+      <div class="centered-text" style="font-size:40px">경매기간</div>
+    </div>
+  </div>
+  <div class="item">
+  <input type="radio" id="day1" name="auction"  />
+  <label for="day1">1일</label>
+
+  <input type="radio" id="day3" name="auction" />
+  <label for="day3">3일</label>
+
+  <input type="radio" id="day5" name="auction" />
+  <label for="day5">5일</label>
+
+  <input type="radio" id="day7" name="auction"/>
+  <label for="day7">7일</label>
+</div>
+
+<button class="finish_button">Finish</button>
+    
+
+  </div>
+</div>
+  
+  <div class="footer" style="margin-top:50px">
+        <div>
+          <div class="footer-content">
+            Giboo&Take<br />Copyrightⓒ 2023 by 오소몰 all rights reserved
+          </div>
+</body>
+</html>
