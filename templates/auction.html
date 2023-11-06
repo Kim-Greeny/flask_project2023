@@ -1,39 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/takePage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Source+Serif+4:opsz@8..60&display=swap"
+      rel="stylesheet"
+    />
     <style>
+
+        .navbar {
+        width: 97%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        }
+        .title {
+        text-decoration: none;
+        color: black;
+        font-size: 35px;
+        font-family: "Irish Grover";
+        }
+        ul {
+        width: 15vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        }
+        li,
+        .login {
+        text-decoration-line: none;
+        color: black;
+        font-size: 20px;
+        font-family: "Source Serif 4";
+        }
+        .login {
+        width: 15vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+        }
+
         .container {
-            position: relative;
-            background-color: FFE0F4;
-            border: 1px solid black;
-            width: 40%;
-            margin-left: 30%;
-            height: 300%
+          max-width: 800px;
+          margin: 20px auto;
+          background-color: #ffe8f6;
+          border: 1px solid #ccc;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+          background-color: #ff53a5;
+          height: 15vh;
+        }
+        .footer-content {
+          font-size: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 20px;
         }
 
         .outerbox {
-            width: 30%;
-            height: 160px;
+            margin:5%;
+            width: 35%;
+            height: 370px;
             background-color: white;
-            position: absolute;
-            left: 5%;
-            top: 200px
         }
 
         .innerbox {
-            width: 27%;
-            height: 120px;
+            width:30%;
+            height: 270px;
             background-color: gray;
-            position: absolute;
-            left: 6.5%;
-            top: 210px;
+            position:relative;left:7.6%;bottom:390px;
         }
 
         .bottomleft {
-            position: absolute;
-            bottom: 3px;
-            left: 5px;
+            position: relative;
+            top:300px;
+            left:8%;
             font-size: 9px;
+        }
+        .bottomleft2{
+          position:relative;
+          top:250;
+          left:5%;
         }
 
         .current {
@@ -43,31 +110,27 @@
         }
 
         .size1 {
-            width: 25%;
-            height: 35px;
-            font-size: 10px;
+            width: 20%;
+            height: 60px;
+            font-size: 20px;
         }
 
         .size2 {
             width: 35%;
-            height: 40px;
+            height: 60px;
         }
 
         .plusoutline {
-            position: absolute;
-            left: 40%;
-            top: 280px;
+            display:flex;
             width: 25%;
-            height: 130px;
-            background-color: F512CC;
+            height: 270px;
+            background-color: #f512cc;
         }
 
         .minusoutline {
-            position: absolute;
-            left: 66%;
-            top: 280px;
+          display:flex;
             width: 25%;
-            height: 130px;
+            height: 270px;
             background-color: gray;
         }
 
@@ -89,60 +152,140 @@
             width: 51%;
             height: 17px;
             font-size: 7px;
-            position: absolute;
-            left: 40%;
-            top: 420px;
         }
 
         .finish {
-            position: absolute;
-            right: 9%;
-            top: 440px;
             background-color: pink;
             border: 1px solid black;
             border-radius: 20%/20%;
+        }
+        .column{
+          display: flex;
+          flex-direction: column;
+        }
+        .row{
+          display: flex;
+          flex-direction: row;
         }
     </style>
 </head>
 
 <body>
+   <nav class="navbar">
+    <div style="display: flex; flex-direction: row; align-items: center">
+      <a href="" class="title">Giboo & Take</a>
+      <ul class="navbar_menu">
+        <li>Giboo</li>
+        <li>Take</li>
+        <li>Charge</li>
+      </ul>
+    </div>
+    <div class="login">
+      <div>login</div>
+      <div>|</div>
+      <div>sign up</div>
+      <img
+        src="../static/icons/profile_img.png"
+        alt="profile"
+        style="width: 50px"
+      />
+    </div>
+  </nav>
+
     <div class="container">
-        <h6 style="position: absolute; left:5%; top:145px;">경매종료
-            <span style="color:FF26D8;font-size:14pt">D-day</span></h2>
-
+      
+            <h1 style="margin:5%;position:relative;left:1%;top:35">경매종료
+            <span style="color:FF26D8;font-size:30pt;">D-day</span></h1>
             <div class="outerbox">
-                <div class="bottomleft">Item name: <br>빈티지 텔레비전</div>
+                <div class="bottomleft"><h1>Item name: <br>빈티지 텔레비전</div>
             </div>
 
-            <div class="innerbox"></div>
-
-            <div class="current size2" style="position:absolute;left:55%;top:225px"></div>
-            <div class="current size1" style="position:absolute;left:40%;top:210px"><br>현재입찰금액</div>
-
-            <div></div>
-
-            <div class="plusoutline">
-                <div class="bottomleft">add</div>
+            <div class="column">
+            <div class="row">
+              <div class="innerbox"></div>
+              <div class="current size2" style="position:relative;left:30%;bottom:290;"></div>
+              <div class="current size1" style="position:relative;right:20%;bottom:315"><br>현재입찰금액</div>
             </div>
 
-            <div class="minusoutline">
-                <div class="bottomleft">minus</div>
+            <div class="row">
+              <div class="plusoutline"style="position:relative;left:43%;bottom:480">
+                <div class="bottomleft2">add</div>
+              </div>
+
+              <div class="minusoutline"style="position:relative;left:44%;bottom:480">
+                <div class="bottomleft2">minus</div>
+              </div>
             </div>
 
-
-            <input class="size";type='button' onclick='count("plus500")' value='+500' style="position:absolute;left:43%;top:295px;"/>
-            <input class="size";type='button' onclick='count("plus1000")'value='+1000'style="position:absolute;left:43%;top:325px;"/>
-            <input class="size";type='button' onclick='count("plus5000")'value='+5000'style="position:absolute;left:43%;top:355px;"/>
-            <input class="size"; type='button' onclick='count("minus500")'value='-500'style="position:absolute;left:68%;top:295px;"/>
-            <input class="size";type='button' onclick='count("minus1000")'value='-1000'style="position:absolute;left:68%;top:325px;"/>
-            <input class="size";type='button' onclick='count("minus5000")'value='-5000'style="position:absolute;left:68%;top:355px;"/>
-            <div id='result' style="position:absolute;left:68%;top:230px">0</div>
+            <input class="size";type='button' onclick='count("plus500")' value='+500' style=/>
+            <input class="size";type='button' onclick='count("plus1000")'value='+1000'style=/>
+            <input class="size";type='button' onclick='count("plus5000")'value='+5000'style=/>
+            <input class="size"; type='button' onclick='count("minus500")'value='-500'style=/>
+            <input class="size";type='button' onclick='count("minus1000")'value='-1000'style=/>
+            <input class="size";type='button' onclick='count("minus5000")'value='-5000'style=/>
+            <div id='result' style="position:">0</div>
+            </div>
 
             <form method="get" action="">
                 <input class="inputsize" type="number" name="number" placeholder="입찰금액을 직접 입력하세요">
                 <input class="finish" type="submit" value="Finish">
             </form>
+          </div>
+    </div>
+    <div class="footer">
+      <div>
+        <div class="footer-content">
+          Giboo&Take<br />Copyrightⓒ 2023 by 오소몰 all rights reserved
+        </div>
+        <!--인스타그램 깃허브 아이콘 연결-->
+      </div>
+    </div>
+      
       <script>
+        function openModal(imageSrc, altText) {
+      var modal = document.getElementById("myModal");
+      var modalContent = document.querySelector(".modal-content");
+      var modalImage = document.getElementById("modalImage");
+
+      // Set the image source and alt text
+      modalImage.src = imageSrc;
+      modalImage.alt = altText;
+
+      // Show the modal
+      modal.style.display = "block";
+
+      // Ensure the image is loaded before calculating dimensions
+      modalImage.onload = function() {
+          // Calculate the aspect ratio of the image
+          var aspectRatio = modalImage.width / modalImage.height;
+
+          // Set the maximum width and height of the image to fit inside the modal
+          var maxWidth = modalContent.clientWidth * 0.9;
+          var maxHeight = window.innerHeight * 0.8;
+
+          // Calculate corresponding width and height based on aspect ratio
+          var width = Math.min(maxWidth, maxHeight * aspectRatio);
+          var height = width / aspectRatio;
+
+          // Set the image dimensions
+          modalImage.style.width = width + "px";
+          modalImage.style.height = height + "px";
+      };
+      }
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+
+    // Close modal if clicked outside of the modal content
+    window.onclick = function(event) {
+        var modal = document.getElementById("myModal");
+        if (event.target === modal) {
+            closeModal();
+        }
+    };
+
         function count(type)  {
   // 결과를 표시할 element
   const resultElement = document.getElementById('result');
