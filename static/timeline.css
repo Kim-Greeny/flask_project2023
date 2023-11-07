@@ -21,6 +21,13 @@
   left: 435px;
   z-index: 10;
 }
+.face {
+  position: absolute;
+  width: 120px;
+  top: 75px;
+  left: 710px;
+  z-index: 10;
+}
 .title {
   font-size: 50px;
   font-weight: 800;
