@@ -1,0 +1,39 @@
+.background {
+  width: 50%;
+  height: 100%;
+  margin-left: 25%;
+  background-color: #fff0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mycart_tab {
+  position: absolute;
+  width: 150px;
+  top: 20px;
+  left: 600px;
+  z-index: 5;
+}
+.mygiboo_tab {
+  position: absolute;
+  width: 150px;
+  top: 50px;
+  left: 800px;
+  z-index: 5;
+}
+.mytake_tab {
+  position: absolute;
+  width: 150px;
+  top: 50px;
+  left: 1000px;
+  z-index: 5;
+}
+
+.container {
+  background-image: url("../static/icons/hologramImg.png");
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 100px;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
