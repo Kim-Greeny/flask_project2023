@@ -10,7 +10,7 @@
 .mycart_tab {
   position: absolute;
   width: 150px;
-  top: 60px;
+  top: 105px;
   left: 580px;
   z-index: 5;
 }
@@ -24,7 +24,7 @@
 .mytake_tab {
   position: absolute;
   width: 150px;
-  top: 105px;
+  top: 60px;
   left: 980px;
   z-index: 5;
 }

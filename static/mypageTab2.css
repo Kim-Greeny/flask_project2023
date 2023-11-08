@@ -10,14 +10,14 @@
 .mycart_tab {
   position: absolute;
   width: 150px;
-  top: 60px;
+  top: 105px;
   left: 580px;
   z-index: 5;
 }
 .mygiboo_tab {
   position: absolute;
   width: 150px;
-  top: 105px;
+  top: 65px;
   left: 780px;
   z-index: 5;
 }
