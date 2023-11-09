@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
+    <link rel="stylesheet" href="../static/product_registerPage.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,178 +12,12 @@
       href="https://fonts.google.com/specimen/Inknut+Antiqua"
       rel="stylesheet"
     />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Source+Serif+4:opsz@8..60&display=swap"
       rel="stylesheet"
     />
-    <style>
-      @font-face {
-        font-family: "Orbit-Regular";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2")
-          format("woff2");
-        font-weight: normal;
-        font-style: normal;
-      }
-
-      .wrapper {
-        height: 100%;
-        margin-left: 382px;
-      }
-      /*nav*/
-      .navbar {
-        width: 97%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 20px;
-      }
-      .title {
-        text-decoration: none;
-        color: black;
-        font-size: 35px;
-        font-family: "Irish Grover";
-      }
-      ul {
-        width: 15vw;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        list-style: none;
-      }
-      li,
-      .login {
-        text-decoration-line: none;
-        color: black;
-        font-size: 20px;
-        font-family: "Source Serif 4";
-      }
-      .login {
-        width: 15vw;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .footer {
-        width: 100vw;
-        background-color: #ff53a5;
-        height: 15vh;
-      }
-      .footer-content {
-        font-size: 12px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-      }
-      .overflow_container {
-        width: 100vw;
-      }
-
-      .image-container {
-        position: relative;
-        display: inline-block;
-      }
-
-      .centered-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: black;
-        font-size: 50px;
-        font-weight: bold;
-        font-family: "Orbit-Regular";
-      }
-
-      .container {
-        display: flex;
-        align-items: center;
-        background-color: #ffffff;
-      }
-      .item_info_container {
-        display: flex;
-        justify-content: center;
-      }
-      .item_input_container {
-        flex-direction: row;
-      }
-      .item {
-        display: flex;
-        margin-top: 3%;
-      }
-
-      .input {
-        width: 700px;
-        height: 80px;
-        border: 3px solid #000000;
-        border-radius: 20px;
-      }
-
-      input::placeholder {
-        font-size: 30px;
-        color: #888;
-      }
-      .input_introducion {
-        height: 300px;
-        width: 1000px;
-        border-radius: 20px;
-        font-size: 30px;
-        padding: 10px;
-        text-align: left;
-        resize: none;
-        line-height: normal;
-        overflow: auto;
-      }
-
-      input[type="radio"] {
-        display: none;
-      }
-
-      label {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-
-        font-size: 40px;
-
-        height: 80px;
-        width: 200px;
-
-        padding: 10px 20px;
-        margin: 5px;
-
-        font-family: Orbit-Regular;
-        border-radius: 20px;
-        border: 3px solid #000000;
-      }
-
-      input[type="radio"]:checked + label {
-        border-radius: 20px;
-        border: 3px solid #000000;
-        background-color: #ffbce7;
-      }
-      .finish_button {
-        margin-top: 50px;
-        margin-left: 40%;
-        width: 300px;
-        height: 150px;
-        background-color: #f44d99;
-        border-radius: 20px;
-        font-size: 80px;
-        color: #ffffff;
-        font-family: Inknut Antiqua;
-      }
-    </style>
   </head>
-
-
-  <body style="width: 100vw">
+  <body>
     <nav class="navbar">
       <div style="display: flex; flex-direction: row; align-items: center">
         <a href="" class="title">Giboo & Take</a>
@@ -204,75 +38,73 @@
         />
       </div>
     </nav>
-    <!---->
-    <div class="wrapper" style="width: 50vw">
-      <div class="container">
-
-          <img
-            src="../image_product_register/Wave.png"
-            alt="WAVE"
-            style="width: 100%"
-          />
-          <img
-            src="../image_product_register/스크린샷 2023-10-14 오전 12.27 2.png"
-            alt="LINE"
-            style="width: 100%"
-          />
-
-          <div class="image-container">
-            <img
-              src="../image_product_register/product_register_tag.png"
-              alt="TAG"
-              style="width: 100%"
-            />
-            <div class="centered-text">상품등록</div>
-          </div>
-        </div>
+    <!--상단-->
+    <div class="wrapper">
+      <div class="contents">
+        <img
+          src="../image_product_register/Wave.png"
+          alt="WAVE"
+          style="width: 100%"
+        />
+        <img
+          src="../image_product_register/스크린샷 2023-10-14 오전 12.27 2.png"
+          alt="LINE"
+          style="width: 100%"
+        />
       </div>
-
-      <!--product_regidter main funtion_상품 등록화면-->
-
+      <!--상품등록화면-->
+      <div class="title">
+        <img
+          src="../image_product_register/title.png"
+          style="width: 180px; height: 50px"
+        />
+      </div>
       <div class="item_info_container">
-        <div>
+        <div style="width: 35%">
           <img
             src="../image_product_register/item_box_register.png"
             alt="ITEM_BOX"
             style="width: 100%"
           />
-          <div class="item">
+          <div style="margin-left: 15px">
+            <span>
+              <img
+                src="../image_product_register/mini_itemphoto.png"
+                alt="ITEM_INFO_TAG"
+                style="width: 45%"
+              />
+            </span>
             <img
               src="../image_product_register/mini_itemphoto.png"
               alt="ITEM_INFO_TAG"
-              style="width: 100%"
+              style="width: 45%"
             />
-            <img
-              src="../image_product_register/mini_itemphoto.png"
-              alt="ITEM_INFO_TAG"
-              style="width: 100%"
-            />
-            <script></script>
           </div>
-          <div class="item">
+          <div style="margin-left: 15px">
+            <span>
+              <img
+                src="../image_product_register/mini_itemphoto.png"
+                alt="ITEM_INFO_TAG"
+                style="width: 45%"
+              />
+            </span>
             <img
               src="../image_product_register/mini_itemphoto.png"
               alt="ITEM_INFO_TAG"
-            />
-            <img
-              src="../image_product_register/mini_itemphoto.png"
-              alt="ITEM_INFO_TAG"
+              style="width: 45%"
             />
           </div>
         </div>
-
-        <div class="item_input_container">
+        <div class="item_input_container" style="width: 65%">
           <!--상품명-->
           <div class="item">
             <div class="image-container">
               <img
                 src="../image_product_register/item_info_tag.png"
                 alt="ITEM_INFO_TAG"
+                width="200px"
               />
-              <div class="centered-text" style="font-size: 40px">상품명</div>
+              <div class="centered-text" style="font-size: 18px">상품명</div>
             </div>
           </div>
           <div class="item">
@@ -290,8 +122,9 @@
               <img
                 src="../image_product_register/item_info_tag.png"
                 alt="ITEM_INFO_TAG"
+                width="200px"
               />
-              <div class="centered-text" style="font-size: 40px">상품가격</div>
+              <div class="centered-text" style="font-size: 18px">상품가격</div>
             </div>
           </div>
           <div class="item">
@@ -309,8 +142,9 @@
               <img
                 src="../image_product_register/item_info_tag.png"
                 alt="ITEM_INFO_TAG"
+                width="200px"
               />
-              <div class="centered-text" style="font-size: 40px">거래방식</div>
+              <div class="centered-text" style="font-size: 18px">거래방식</div>
             </div>
           </div>
           <div class="item">
@@ -325,8 +159,9 @@
               <img
                 src="../image_product_register/item_info_tag.png"
                 alt="ITEM_INFO_TAG"
+                width="200px"
               />
-              <div class="centered-text" style="font-size: 40px">상품 상태</div>
+              <div class="centered-text" style="font-size: 18px">상품 상태</div>
             </div>
           </div>
           <div class="item">
@@ -346,8 +181,9 @@
               <img
                 src="../image_product_register/item_info_tag.png"
                 alt="ITEM_INFO_TAG"
+                width="200px"
               />
-              <div class="centered-text" style="font-size: 40px">상세설명</div>
+              <div class="centered-text" style="font-size: 18px">상세설명</div>
             </div>
           </div>
 
@@ -367,8 +203,9 @@
               <img
                 src="../image_product_register/item_info_tag.png"
                 alt="ITEM_INFO_TAG"
+                width="200px"
               />
-              <div class="centered-text" style="font-size: 40px">경매기간</div>
+              <div class="centered-text" style="font-size: 18px">경매기간</div>
             </div>
           </div>
           <div class="item">
@@ -389,6 +226,7 @@
         </div>
       </div>
     </div>
+
     <!--푸터-->
     <div class="footer">
       <div>
