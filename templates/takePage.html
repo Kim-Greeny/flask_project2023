@@ -34,31 +34,49 @@
         />
       </div>
     </nav>
-    <div class="container">
-      <div style="position: relative">
-        <img
-          class="take_top"
-          src="../static/icons/take_top.png"
-          style="width: 100%"
-        />
-        <span class="tabG"></span>
-        <span class="tabT">Take</span>
+    <div class="container" style="position: relative; top: 80px">
+      <!--상단 탭 부분-->
+      <div style="position: static; background-color: #ff53a5; height: 305px">
+        <div style="position: relative">
+          <img
+            src="../static/icons/join_in.png"
+            style="position: absolute; width: 250px; top: 20px; left: 10px"
+          />
+          <img
+            src="../static/icons/acheivement.png"
+            style="position: absolute; width: 250px; top: 40px; left: 460px"
+          />
+          <img
+            src="../static/icons/take_icon.png"
+            style="position: absolute; width: 200px; top: 80px; left: 645px"
+          />
+          <img
+            src="../static/icons/giboo_tab.png"
+            style="position: absolute; width: 150px; top: 250px; left: 30px"
+          />
+          <img
+            src="../static/icons/take_tab.png"
+            style="position: absolute; width: 180px; top: 207px; left: 190px"
+          />
+        </div>
       </div>
-      <div class="contents">
+      <!--상품부분-->
+      <div class="contents" style="position: static">
         <input class="keyword" placeholder="키워드를 입력하세요." />
         <span class="top">
-          <span class="sort-due">마감일순</span>
-          <span class="sort-hot">인기순</span>
+          <span class="sort-due" style="margin-left: 310px">마감일순</span>
+          <span class="sort-hot" style="margin-left: 15px">인기순</span>
           <img
             class="filter_btn"
             src="../static/icons/filter_btn.png"
-            style="width: 30px"
+            style="width: 20px; margin-left: 5px"
           />
         </span>
+        <div class="items" id="itemContainer"></div>
       </div>
     </div>
-    <!--푸터-->
-    <div class="footer">
+    <!--footer-->
+    <div class="footer" style="position: relative; top: 80px">
       <div>
         <div class="footer-content">
           Giboo&Take<br />Copyrightⓒ 2023 by 오소몰 all rights reserved
@@ -66,5 +84,6 @@
         <!--인스타그램 깃허브 아이콘 연결-->
       </div>
     </div>
+    <script src="../static/takePage.js"></script>
   </body>
 </html>
