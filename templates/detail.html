@@ -1,5 +1,12 @@
  {% extends "index.html" %}
  {% block section %}
+<script>
+    function showHeart(){
+        $.ajax({
+            
+        })
+    }
+</script>
 <p>
     item name is <b>{{name}}</b> and address is {{data.addr}}
 </p>
@@ -16,4 +23,8 @@
     {% endif %}
 </p>
 <img src="../../static/images/{{data.img_path}}", width=140, height=200>
+<button onclick="location.href='/reg_review_init/{{name}}/';">
+    리뷰등록
+</button>
+<i class="fa fa-heart" id="heart"></i>
 {% endblock %}
