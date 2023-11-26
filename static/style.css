@@ -71,3 +71,10 @@ body {
  text-decoration: none;
  font-weight:bold;
 }
+#heart{
+ color: grey;
+ font-size:50px;
+}
+#heart.red{
+ color:red;
+}
