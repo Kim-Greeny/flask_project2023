@@ -113,9 +113,10 @@ body {
     font-size: 16px;
     resize: none;
 }
-#heart{
- color: grey;
- font-size:50px;
+#heart {
+    color: gray;
+    font-size:50px;
 }
-#heart.red{
- color:red;
+#heart.red {
+    color:red;
+}

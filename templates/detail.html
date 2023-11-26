@@ -3,6 +3,27 @@
 <script>
     function showHeart(){
         $.ajax({
+            type:'GET',
+            url:'/show_heart/{{name}}/',
+            data:{},
+            success:function(response){
+                let my_heart=response['my_heart'];
+                if(my_heart['interested']=='Y')
+                {
+                    $("#heart").css("color","red");
+                    $("#heart").attr("onclick","unlike()");
+                }
+                else
+                {
+                    $("#heart").css("color","gray");
+                    $("#heart").attr("onclick","like()");
+                }
+                //alert("showheart!")
+            }
+        });
+    }
+    function like(){
+        $.ajax({
             type:'POST',
             url: '/like/{{name}}',
             data:{
@@ -50,5 +71,5 @@
 <button onclick="location.href='/reg_review_init/{{name}}/';">
     리뷰등록
 </button>
-<i class="fa fa-heart" id="heart"></i>
+<i class="fas fa-heart" id="heart"></i>
 {% endblock %}

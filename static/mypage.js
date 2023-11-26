@@ -95,4 +95,4 @@ keywordForm.addEventListener("submit", function (event) {
             },
         },
     })
-};
+});
