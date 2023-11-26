@@ -3,9 +3,33 @@
 <script>
     function showHeart(){
         $.ajax({
-            
-        })
+            type:'POST',
+            url: '/like/{{name}}',
+            data:{
+                interested:"Y"
+            },
+            success:function(response){
+                alert(response['msg']);
+                window.location.reload()
+            }
+        });
     }
+    function unlike(){
+        $.ajax({
+            type:'POST',
+            url:'/unlike/{{name}}/',
+            data:{
+                interested:"N"
+            },
+            success:function(response){
+                alert(response['msg']);
+                window.location.reload()
+            }
+        });
+    }
+    $(document).ready(function(){
+        showHeart();
+    });
 </script>
 <p>
     item name is <b>{{name}}</b> and address is {{data.addr}}
