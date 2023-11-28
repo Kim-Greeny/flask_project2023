@@ -3,40 +3,33 @@
 <script>
     function showHeart(){
         $.ajax({
-<<<<<<< HEAD
-            type:'POST',
-            url: '/like/{{name}}',
-            data:{
-                interested:"Y"
-            },
+            type:'GET',
+            url:'/show_heart/{{name}}/',
+            data:{},
             success:function(response){
-=======
-            type: 'GET',
-            url: '/show_heart/{{name}}/',
-            data: {},
-            success: function (response) {
                 let my_heart=response['my_heart'];
-                if (my_heart['interested']=='Y'){
-                    $("#heart").css("color", "red");
-                    $("#heart").attr("onclick", "unlike()");
+                if(my_heart['interested']=='Y')
+                {
+                    $("#heart").css("color","red");
+                    $("#heart").attr("onclick","unlike()");
                 }
-                else{
-                    $("#heart").css("color", "gray");
-                    $("#heart").attr("onclick", "like()");
+                else
+                {
+                    $("#heart").css("color","gray");
+                    $("#heart").attr("onclick","like()");
                 }
-                //alert("showHeart!")
+                //alert("showheart!")
             }
         });
     }
     function like(){
         $.ajax({
             type:'POST',
-            url:'/like/{{name}}/',
+            url: '/like/{{name}}',
             data:{
                 interested:"Y"
             },
-            success: function(response){
->>>>>>> week12-3
+            success:function(response){
                 alert(response['msg']);
                 window.location.reload()
             }
@@ -49,11 +42,7 @@
             data:{
                 interested:"N"
             },
-<<<<<<< HEAD
             success:function(response){
-=======
-            success: function(response){
->>>>>>> week12-3
                 alert(response['msg']);
                 window.location.reload()
             }
@@ -82,9 +71,5 @@
 <button onclick="location.href='/reg_review_init/{{name}}/';">
     리뷰등록
 </button>
-<<<<<<< HEAD
-<i class="fa-solid fa-heart" id="heart"></i>
-=======
 <i class="fa fa-heart" id="heart"></i>
->>>>>>> week12-3
 {% endblock %}
