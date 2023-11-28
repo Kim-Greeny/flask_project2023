@@ -1,4 +1,4 @@
-from flask import Flask, render_template, flash, redirect, url_for, request, session
+from flask import Flask, render_template, flash, redirect, url_for, request, session, jsonify
 from database import DBhandler
 import hashlib
 import sys
@@ -81,7 +81,33 @@ def view_list():
 
 @application.route("/review")
 def view_review():
-    return render_template("review.html")
+    page = request.args.get("page", 0, type=int)
+    per_page = 6
+    per_row = 3
+    row_count = int(per_page/per_row)
+    start_idx = per_page * page
+    end_idx = per_page*(page+1)
+    data = DB.get_reviews()
+    item_counts = len(data)
+    data = dict(list(data.items())[start_idx:end_idx])
+    tot_count = len(data)
+
+    for i in range(row_count):
+        if (i == row_count-1) and (tot_count % per_row != 0):
+            locals()['data_{}'.format(i)] = dict(list(data.items())[i*per_row:])
+        else:
+            locals()['data_{}'.format(i)] = dict(list(data.items())[i*per_row:(i+1)*per_row])
+
+    return render_template(
+        "review.html",
+        datas=data.items(),
+        row1=locals()['data_0'].items(),
+        row2=locals()['data_1'].items(),
+        limit=per_page,
+        page=page,
+        page_count=int((item_counts/per_page)+1),
+        total=item_counts)
+
 
 @application.route("/reg_items")
 def reg_item():
@@ -94,13 +120,22 @@ def reg_review_init(name):
 @application.route("/reg_reviews", methods=['POST'])
 def reg_reviews():
     data=request.form
-    DB.reg_review(data)
-    return redirect(url_for('review'))
+    image_file=request.files["file"]
+    image_file.save("static/images/{}".format(image_file.filename))
+    DB.reg_review(data, img_path="static/images/{}".format(image_file.filename))
+    return redirect(url_for('view_review'))
 
 @application.route('/dynamicurl/<varible_name>/')
 def DynamicUrl(varible_name):
            return str(varible_name)
 
+@application.route("/view_review_detail/<name>/")
+def view_review_detail(name):
+    print("###name:", name)
+    data = DB.get_review_byname(str(name))
+    print("###data:", data)
+    return render_template("review_detail.html", name=name, data=data)
+    
 @application.route("/view_detail/<name>/")
 def view_item_detail(name):
     print("###name:",name)
@@ -117,6 +152,20 @@ def reg_item_submit_post():
     
     return render_template("submit_item_result.html", data=data, img_path="static/images/{}".format(image_file.filename))
 
+@application.route('/show_heart/<name>/', methods=['GET'])
+def show_heart(name):
+    my_heart = DB.get_heart_byname(session['id'],name)
+    return jsonify({'my_heart': my_heart})
+
+@application.route('/like/<name>/', methods=['POST'])
+def like(name):
+    my_heart = DB.update_heart(session['id'],'Y',name)
+    return jsonify({'msg': '좋아요 완료!'})
+
+@application.route('/unlike/<name>/', methods=['POST'])
+def unlike(name):
+    my_heart = DB.update_heart(session['id'],'N',name)
+    return jsonify({'msg': '안좋아요 완료!'})
 
 if __name__ == "__main__":
     application.run(host='0.0.0.0', debug=True)
