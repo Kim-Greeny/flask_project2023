@@ -71,6 +71,7 @@ body {
  text-decoration: none;
  font-weight:bold;
 }
+<<<<<<< HEAD
 
 #myform fieldset {
     display: inline-block;
@@ -122,4 +123,12 @@ body {
 
 #heart.red{
     color: red;
+=======
+#heart{
+ color: grey;
+ font-size:50px;
+}
+#heart.red{
+ color:red;
+>>>>>>> a8192bf186722fe7196bbae2cb3a2c7df88616a3
 }
