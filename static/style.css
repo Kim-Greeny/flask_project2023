@@ -114,3 +114,12 @@ body {
     font-size: 16px;
     resize: none;
 }
+
+#heart{
+    color: gray;
+    font-size: 50px;
+}
+
+#heart.red{
+    color: red;
+}
