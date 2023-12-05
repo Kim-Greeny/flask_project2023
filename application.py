@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-# -*- coding: utf-8 -*-
-
->>>>>>> upstream/week11-2
 from flask import Flask, render_template, flash, redirect, url_for, request, session, jsonify
 from database import DBhandler
 import hashlib
@@ -92,44 +87,9 @@ def view_list():
         row2=locals()['data_1'].items(),
         limit=per_page,
         page=page,
-<<<<<<< HEAD
-        page_count=int((item_counts/per_page)+1),
-        total=item_counts)
-
-@application.route("/review")
-def view_review():
-    page = request.args.get("page", 0, type=int)
-    per_page = 6
-    per_row = 3
-    row_count = int(per_page/per_row)
-    start_idx = per_page * page
-    end_idx = per_page*(page+1)
-    data = DB.get_reviews()
-    item_counts = len(data)
-    data = dict(list(data.items())[start_idx:end_idx])
-    tot_count = len(data)
-
-    for i in range(row_count):
-        if (i == row_count-1) and (tot_count % per_row != 0):
-            locals()['data_{}'.format(i)] = dict(list(data.items())[i*per_row:])
-        else:
-            locals()['data_{}'.format(i)] = dict(list(data.items())[i*per_row:(i+1)*per_row])
-
-    return render_template(
-        "review.html",
-        datas=data.items(),
-        row1=locals()['data_0'].items(),
-        row2=locals()['data_1'].items(),
-        limit=per_page,
-        page=page,
-        page_count=int((item_counts/per_page)+1),
-        total=item_counts)
-
-=======
         page_count=int(math.ceil(item_counts/per_page)+1),
         total=item_counts,
         category=category)
->>>>>>> upstream/week11-2
 
 @application.route("/reg_items")
 def reg_item():
@@ -139,15 +99,6 @@ def reg_item():
 def reg_review_init(name):
     return render_template("reg_reviews.html", name=name)
 
-<<<<<<< HEAD
-@application.route("/reg_reviews", methods=['POST'])
-def reg_reviews():
-    data=request.form
-    image_file=request.files["file"]
-    image_file.save("static/images/{}".format(image_file.filename))
-    DB.reg_review(data, img_path="static/images/{}".format(image_file.filename))
-    return redirect(url_for('view_review'))
-=======
 @application.route("/reg_review", methods=['POST'])
 def reg_review():
     data=request.form
@@ -189,19 +140,11 @@ def view_review_detail(name):
     data = DB.get_review_byname(str(name))
     print("###data:", data)
     return render_template("review_detail.html", name=name, data=data)
->>>>>>> upstream/week11-2
 
 @application.route('/dynamicurl/<varible_name>/')
 def DynamicUrl(varible_name):
            return str(varible_name)
 
-@application.route("/view_review_detail/<name>/")
-def view_review_detail(name):
-    print("###name:", name)
-    data = DB.get_review_byname(str(name))
-    print("###data:", data)
-    return render_template("review_detail.html", name=name, data=data)
-    
 @application.route("/view_detail/<name>/")
 def view_item_detail(name):
     print("###name:",name)

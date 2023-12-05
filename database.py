@@ -11,8 +11,7 @@ class DBhandler:
             
     def insert_item(self, name, data, img_path):
         item_info ={
-            "seller": data['seller'],
-            "addr": data['addr'],
+            "seller": data['seller'],"addr": data['addr'],
             "email": data['email'],
             "category": data['category'],
             "card": data['card'],
@@ -94,12 +93,8 @@ class DBhandler:
                 return target_value
             
     def reg_review(self, data, img_path):
-<<<<<<< HEAD
-        review_info = {
-=======
         review_info ={
             "title": data['title'],
->>>>>>> upstream/week11-2
             "rate": data['reviewStar'],
             "review": data['reviewContents'],
             "img_path": img_path
@@ -107,13 +102,10 @@ class DBhandler:
         self.db.child("review").child(data['name']).set(review_info)
         return True
     
-<<<<<<< HEAD
-=======
     def get_reviews(self ):
         reviews = self.db.child("review").get().val()
         return reviews
     
->>>>>>> upstream/week11-2
     def get_review_byname(self, name):
         reviews = self.db.child("review").get()
         target_value=""
@@ -123,39 +115,18 @@ class DBhandler:
             if key_value == name:
                 target_value=res.val()
                 return target_value
-<<<<<<< HEAD
-        
-    def get_reviews(self):
-        reviews = self.db.child("review").get().val()
-        return reviews
-    
-=======
->>>>>>> upstream/week11-2
     def get_heart_byname(self, uid, name):
         hearts = self.db.child("heart").child(uid).get()
         target_value=""
         if hearts.val() == None:
             return target_value
-<<<<<<< HEAD
-    
-=======
         
->>>>>>> upstream/week11-2
         for res in hearts.each():
             key_value = res.key()
             
             if key_value == name:
                 target_value=res.val()
         return target_value
-<<<<<<< HEAD
-
-    def update_heart(self, user_id, isHeart, item):
-        heart_info ={
-            "interested": isHeart
-        }
-        self.db.child("heart").child(user_id).child(item).set(heart_info)
-        return True
-=======
     
     def update_heart(self, user_id, isHeart, item):
                 heart_info ={
@@ -165,4 +136,3 @@ class DBhandler:
                 return True
     
     
->>>>>>> upstream/week11-2
