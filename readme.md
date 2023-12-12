@@ -24,7 +24,7 @@
  <br /><br />
 
 ### 구현 기능✏️
-#### 기능1. 추천가 제시 및 가격합리성 표기 기능
+#### 기능1. 추천가 제시 및 가격 합리성 표기
 <img width="300" alt="rec" src="https://github.com/Kim-Greeny/flask_project2023/assets/126451052/4ab3e0dc-d508-4c87-89e9-2a7eb3049b77">
 <img width="240" alt="기능2" src="https://github.com/Kim-Greeny/flask_project2023/assets/126451052/2cb0bfcc-c551-403f-89cc-53229a92bf76">
 <br/><br/>
@@ -33,7 +33,7 @@
 <img width="300" alt="seller1" src="https://github.com/Kim-Greeny/flask_project2023/assets/126451052/ec73b632-17ff-489f-8910-ea0cfc7d6e8c"> <img width="300" alt="seller2" src="https://github.com/Kim-Greeny/flask_project2023/assets/126451052/8854b913-a0d0-4ba9-ba7e-a69127fc3b18">
 <br/><br/>
 
-#### 기능3. 전체상품 중 Best 3 리스트업 <br/>
+#### 기능3. 전체상품 중 조회순 Best 3 리스트업 <br/>
 <img width="300" alt="best3" src="https://github.com/Kim-Greeny/flask_project2023/assets/126451052/6d2ef865-44df-497d-bd17-4f71fc0f7a15">
 
 <br/><br/>
