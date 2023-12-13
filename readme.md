@@ -4,6 +4,18 @@
 <p align="center">
   <img width="586" alt="title" src="https://github.com/Kim-Greeny/flask_project2023/assets/126451052/d598210c-7330-44e5-a5dd-ae0913addc75"><br/>
   <h4 align="center">오픈 sw 플랫폼 Ewha Market 프로젝트 - 오소몰 팀</h4>
+  <table align="center">
+    <tr>
+      <td>1771017 김해인</td>
+      <td>2276027 금시연</td>
+      <td>2271056 정은채</td>
+    </tr>
+    <tr>
+      <td>2276335 최지원</td>
+      <td>2276338 최혜원</td>
+      <td></td>
+    </tr>
+  </table>
 </p>
  <br/>
 
@@ -18,7 +30,7 @@
   #### 백엔드
   <img src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white"> <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/flask-000000?style=for-the-badge&logo=flask&logoColor=white"> 
 
-  ##### 협업툴
+  #### 협업툴
   <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
   
  <br /><br />
@@ -74,3 +86,4 @@
 ```
 
 
+ 
