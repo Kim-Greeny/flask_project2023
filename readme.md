@@ -3,19 +3,6 @@
 ### 프로젝트 소개 💻
 <p align="center">
   <img width="586" alt="title" src="https://github.com/Kim-Greeny/flask_project2023/assets/126451052/d598210c-7330-44e5-a5dd-ae0913addc75"><br/>
-  <h4 align="center">오픈 sw 플랫폼 Ewha Market 프로젝트 - 오소몰 팀</h4>
-  <table align="center">
-    <tr>
-      <td>1771017 김해인</td>
-      <td>2276027 금시연</td>
-      <td>2271056 정은채</td>
-    </tr>
-    <tr>
-      <td>2276335 최지원</td>
-      <td>2276338 최혜원</td>
-      <td></td>
-    </tr>
-  </table>
 </p>
  <br/>
 
